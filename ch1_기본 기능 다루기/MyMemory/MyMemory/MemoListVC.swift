@@ -24,7 +24,7 @@ class MemoListVC: UITableViewController {
         let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
         
         // 3. 재사용 큐로부터 프로포타입 셀의 인스턴스를 전달받는다.
-         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
         
         // 4. memoCell의 내용을 구성한다.
         cell.subject?.text = row.title
