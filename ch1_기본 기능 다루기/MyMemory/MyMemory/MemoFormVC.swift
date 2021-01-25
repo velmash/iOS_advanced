@@ -40,14 +40,22 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     // 카메라 버튼을 클릭했을 때 호출되는 메소드
     @IBAction func pick(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: "이미지를 가져올 곳을 선택해주세요", preferredStyle: .actionSheet)
         // 이미지 피커 인스턴스를 생성한다.
         let picker = UIImagePickerController()
-        
         picker.delegate = self
         picker.allowsEditing = true
         
-        // 이미지 피커 화면을 표시한다.
-        self.present(picker, animated: false)
+        alert.addAction(UIAlertAction(title: "카메라", style: .default) { (_) in
+            picker.sourceType = .camera
+            // 이미지 피커 화면을 표시한다.
+            self.present(picker, animated: false)
+        })
+        alert.addAction(UIAlertAction(title: "저장앨범", style: .default) {(_) in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: false)
+        })
+        self.present(alert, animated: true)
     }
     
     // 사용자가 이미지를 선택하면 자동으로 이 메소드가 호출된다.
