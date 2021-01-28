@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8E369425C1414800A3C13A /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E369325C1414800A3C13A /* ControlViewController.swift */; };
+		3A8E369725C1447500A3C13A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E369625C1447500A3C13A /* ListViewController.swift */; };
 		3ACB5A3C25C12E3D00984927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A3B25C12E3D00984927 /* AppDelegate.swift */; };
 		3ACB5A3E25C12E3D00984927 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A3D25C12E3D00984927 /* SceneDelegate.swift */; };
 		3ACB5A4025C12E3D00984927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A3F25C12E3D00984927 /* ViewController.swift */; };
@@ -15,9 +17,14 @@
 		3ACB5A4825C12E4000984927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACB5A4625C12E4000984927 /* LaunchScreen.storyboard */; };
 		3ACB5A5225C1312800984927 /* MapAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A5125C1312800984927 /* MapAlertViewController.swift */; };
 		3ACB5A5525C1361200984927 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A5425C1361200984927 /* MapKitViewController.swift */; };
+		3ACB5A5B25C137FF00984927 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACB5A5925C137FE00984927 /* note.png */; };
+		3ACB5A5C25C137FF00984927 /* rating5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACB5A5A25C137FF00984927 /* rating5@2x.png */; };
+		3ACB5A5F25C1382700984927 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB5A5E25C1382700984927 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A8E369325C1414800A3C13A /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		3A8E369625C1447500A3C13A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3ACB5A3825C12E3D00984927 /* Chapter03-Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter03-Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACB5A3B25C12E3D00984927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACB5A3D25C12E3D00984927 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		3ACB5A4925C12E4000984927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ACB5A5125C1312800984927 /* MapAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAlertViewController.swift; sourceTree = "<group>"; };
 		3ACB5A5425C1361200984927 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		3ACB5A5925C137FE00984927 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
+		3ACB5A5A25C137FF00984927 /* rating5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rating5@2x.png"; sourceTree = "<group>"; };
+		3ACB5A5E25C1382700984927 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 		3ACB5A2F25C12E3D00984927 = {
 			isa = PBXGroup;
 			children = (
+				3ACB5A5725C137BA00984927 /* Resources */,
 				3ACB5A3A25C12E3D00984927 /* Chapter03-Alert */,
 				3ACB5A3925C12E3D00984927 /* Products */,
 			);
@@ -69,8 +80,20 @@
 				3ACB5A4925C12E4000984927 /* Info.plist */,
 				3ACB5A5125C1312800984927 /* MapAlertViewController.swift */,
 				3ACB5A5425C1361200984927 /* MapKitViewController.swift */,
+				3ACB5A5E25C1382700984927 /* ImageViewController.swift */,
+				3A8E369325C1414800A3C13A /* ControlViewController.swift */,
+				3A8E369625C1447500A3C13A /* ListViewController.swift */,
 			);
 			path = "Chapter03-Alert";
+			sourceTree = "<group>";
+		};
+		3ACB5A5725C137BA00984927 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3ACB5A5925C137FE00984927 /* note.png */,
+				3ACB5A5A25C137FF00984927 /* rating5@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +155,9 @@
 			files = (
 				3ACB5A4825C12E4000984927 /* LaunchScreen.storyboard in Resources */,
 				3ACB5A4525C12E4000984927 /* Assets.xcassets in Resources */,
+				3ACB5A5C25C137FF00984927 /* rating5@2x.png in Resources */,
 				3ACB5A4325C12E3D00984927 /* Main.storyboard in Resources */,
+				3ACB5A5B25C137FF00984927 /* note.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +172,10 @@
 				3ACB5A5525C1361200984927 /* MapKitViewController.swift in Sources */,
 				3ACB5A4025C12E3D00984927 /* ViewController.swift in Sources */,
 				3ACB5A3C25C12E3D00984927 /* AppDelegate.swift in Sources */,
+				3ACB5A5F25C1382700984927 /* ImageViewController.swift in Sources */,
 				3ACB5A3E25C12E3D00984927 /* SceneDelegate.swift in Sources */,
+				3A8E369725C1447500A3C13A /* ListViewController.swift in Sources */,
+				3A8E369425C1414800A3C13A /* ControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

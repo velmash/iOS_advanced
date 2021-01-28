@@ -44,6 +44,16 @@ class MapAlertViewController: UIViewController {
         sliderBtn.addTarget(self, action: #selector(sliderAlert(_:)), for: .touchUpInside)
         
         self.view.addSubview(sliderBtn)
+        
+        
+        // 테이블 뷰 알림창 버튼 생성
+        let listBtn = UIButton(type: .system)
+        listBtn.frame = CGRect(x: 0, y: 300, width: 100, height: 30)
+        listBtn.center.x = self.view.frame.width / 2
+        listBtn.setTitle("List Alert", for: .normal)
+        listBtn.addTarget(self, action: #selector(listAlert(_:)), for: .touchUpInside)
+        
+        self.view.addSubview(listBtn)
     }
     
     @objc func mapAlert(_ sender: UIButton) {
@@ -95,5 +105,24 @@ class MapAlertViewController: UIViewController {
         self.present(alert, animated: false)
     }
     
+    @objc func listAlert(_ sender: Any) {
+        // 콘텐츠 뷰 영역에 들어갈 뷰 컨트롤러를 생성
+        let contentVC = ListViewController()
+        // 델리게이트 객체를 자신으로 지정한다.
+        contentVC.delegate = self
+        
+        // 경고창 객체를 생성하고, OK 및 Cancel 버튼을 추가한다.
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        alert.setValue(contentVC, forKey: "contentViewController")
+        
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: false)
+    }
+    
+    func didSelectRowAt(indexPath: IndexPath) {
+        print(">>> 선택된 행은 \(indexPath.row)입니다.")
+    }
     
 }
